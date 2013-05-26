@@ -13,5 +13,5 @@ O The Chess começou quando no www2013, teve um desafio que era criar um tabulei
 * [Vanessa Me Tonini](http://github.com/vanessametonini)
 * [Felquis Gimenes](http://github.com/felquis)
 
-## Menções do The Chess
+## Menções ao The Chess
 * Resultado do desafio Chessboard no www2013 [[link](http://www2013.org/2013/05/14/css-challenge-see-the-results/)]
