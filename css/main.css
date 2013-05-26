@@ -1,0 +1,554 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+.chessboard {
+	width: 593px;
+	height: 593px;
+	background: silver;
+	margin: 50px auto;
+	position: relative;
+}
+
+/*
+	Quadros
+*/
+.chessboard .square {
+	width: 73px;
+	height: 73px;
+	float: left;
+	border: 1px solid;
+	background: #e0e0e0;
+}
+
+.chessboard .line-square:nth-child(odd) .square:nth-child(odd),
+.chessboard .line-square:nth-child(even) .square:nth-child(even) {
+	background: #fff;
+}
+
+.chessboard .line-square .square {
+	border-right: 0;
+	border-bottom: 0;
+}
+
+.chessboard .line-square .square:last-child {
+	border-right: 1px solid
+}
+.chessboard .line-square:last-child .square {
+	border-bottom: 1px solid
+}
+
+/*
+	Números
+*/
+.chessboard {
+	counter-reset: numero 9;
+}
+
+.chessboard .line-square {
+	position: relative;
+	float: left;
+}
+
+.chessboard .line-square:before {
+	counter-increment: numero -1;
+   	content : counters(numero, "");
+   	top: 26px;
+   	left: -20px;
+   	position: absolute;
+}
+
+/*
+	Letras
+*/
+.chessboard .line-square:nth-child(8) .square::before {
+	position: absolute;
+	font-style: normal;
+	bottom: -26px;
+	left: 33px;
+}
+.chessboard .line-square:nth-child(8) .square {
+	position: relative;
+}
+
+.chessboard .line-square:nth-child(8) .square:nth-child(1)::before {
+	content: 'a';
+}
+
+.chessboard .line-square:nth-child(8) .square:nth-child(2)::before {
+	content: 'b';
+}
+
+.chessboard .line-square:nth-child(8) .square:nth-child(3)::before {
+	content: 'c';
+}
+
+.chessboard .line-square:nth-child(8) .square:nth-child(4)::before {
+	content: 'd';
+}
+
+.chessboard .line-square:nth-child(8) .square:nth-child(5)::before {
+	content: 'e';
+}
+
+.chessboard .line-square:nth-child(8) .square:nth-child(6)::before {
+	content: 'f';
+}
+
+.chessboard .line-square:nth-child(8) .square:nth-child(7)::before {
+	content: 'g';
+}
+
+.chessboard .line-square:nth-child(8) .square:nth-child(8)::before {
+	content: 'h';
+}
+
+/*
+	Peças
+*/
+.chessboard .piece {
+	display: block;
+	position: absolute;
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+.chessboard .piece:before {
+	font-size: 50px;
+	font-style: normal;
+}
+
+/*
+	Imagem das peças
+*/
+/* Peão */
+.chessboard .pawn.white:before {
+	content: "\2659";
+}
+
+.chessboard .pawn.black:before {
+	content: "\265F";
+}
+
+/* Cavalo */
+.chessboard .knight.white:before {
+	content: "\2658";
+}
+
+.chessboard .knight.black:before {
+	content: "\265E";
+}
+
+/* Bispo */
+.chessboard .bishop.white:before {
+	content: "\2657";
+}
+
+.chessboard .bishop.black:before {
+	content: "\265D";
+}
+
+/* Torre */
+.chessboard .rook.white:before {
+	content: "\2656";
+}
+
+.chessboard .rook.black:before {
+	content: "\265C";
+}
+
+/* Rainha */
+.chessboard .queen.white:before {
+	content: "\2655";
+}
+
+.chessboard .queen.black:before {
+	content: "\265B";
+}
+
+/* Rei */
+.chessboard .king.white:before {
+	content: "\2654";
+}
+
+.chessboard .king.black:before {
+	content: "\265A";
+}
+
+/*
+	Posição das peças
+*/
+.chessboard .a-1 {
+	top: 526px;
+	left: 12px;
+}
+
+.chessboard .a-2 {
+	top: 452px;
+	left: 12px;
+}
+
+.chessboard .a-3 {
+	top: 376px;
+	left: 12px;
+}
+
+.chessboard .a-4 {
+	top: 301px;
+	left: 12px;
+}
+
+.chessboard .a-5 {
+	top: 227px;
+	left: 12px;
+}
+
+.chessboard .a-6 {
+	top: 154px;
+	left: 12px;
+}
+
+.chessboard .a-7 {
+	top: 81px;
+	left: 12px;
+}
+
+.chessboard .a-8 {
+	top: 5px;
+	left: 12px;
+}
+
+.chessboard .b-1 {
+	top: 524px;
+	left: 86px;
+}
+
+.chessboard .b-2 {
+	top: 452px;
+	left: 86px;
+}
+
+.chessboard .b-3 {
+	top: 375px;
+	left: 86px;
+}
+
+.chessboard .b-4 {
+	top: 302px;
+	left: 86px;
+}
+
+.chessboard .b-5 {
+	top: 228px;
+	left: 86px;
+}
+
+.chessboard .b-6 {
+	top: 151px;
+	left: 86px;
+}
+
+.chessboard .b-7 {
+	top: 79px;
+	left: 86px;
+}
+
+.chessboard .b-8 {
+	top: 7px;
+	left: 86px;
+}
+
+.chessboard .c-1 {
+	top: 524px;
+	left: 161px;
+}
+
+.chessboard .c-2 {
+	top: 452px;
+	left: 161px;
+}
+
+.chessboard .c-3 {
+	top: 375px;
+	left: 161px;
+}
+
+.chessboard .c-4 {
+	top: 302px;
+	left: 161px;
+}
+
+.chessboard .c-5 {
+	top: 228px;
+	left: 161px;
+}
+
+.chessboard .c-6 {
+	top: 151px;
+	left: 161px;
+}
+
+.chessboard .c-7 {
+	top: 79px;
+	left: 161px;
+}
+
+.chessboard .c-8 {
+	top: 7px;
+	left: 161px;
+}
+
+.chessboard .d-1 {
+	top: 524px;
+	left: 235px;
+}
+
+.chessboard .d-2 {
+	top: 452px;
+	left: 235px;
+}
+
+.chessboard .d-3 {
+	top: 375px;
+	left: 235px;
+}
+
+.chessboard .d-4 {
+	top: 302px;
+	left: 235px;
+}
+
+.chessboard .d-5 {
+	top: 228px;
+	left: 235px;
+}
+
+.chessboard .d-6 {
+	top: 151px;
+	left: 235px;
+}
+
+.chessboard .d-7 {
+	top: 79px;
+	left: 235px;
+}
+
+.chessboard .d-8 {
+	top: 7px;
+	left: 235px;
+}
+
+.chessboard .e-1 {
+	top: 524px;
+	left: 308px;
+}
+
+.chessboard .e-2 {
+	top: 452px;
+	left: 308px;
+}
+
+.chessboard .e-3 {
+	top: 375px;
+	left: 308px;
+}
+
+.chessboard .e-4 {
+	top: 302px;
+	left: 308px;
+}
+
+.chessboard .e-5 {
+	top: 228px;
+	left: 308px;
+}
+
+.chessboard .e-6 {
+	top: 151px;
+	left: 308px;
+}
+
+.chessboard .e-7 {
+	top: 79px;
+	left: 308px;
+}
+
+.chessboard .e-8 {
+	top: 7px;
+	left: 308px;
+}
+
+.chessboard .f-1 {
+	top: 524px;
+	left: 382px;
+}
+
+.chessboard .f-2 {
+	top: 452px;
+	left: 382px;
+}
+
+.chessboard .f-3 {
+	top: 375px;
+	left: 382px;
+}
+
+.chessboard .f-4 {
+	top: 302px;
+	left: 382px;
+}
+
+.chessboard .f-5 {
+	top: 228px;
+	left: 382px;
+}
+
+.chessboard .f-6 {
+	top: 151px;
+	left: 382px;
+}
+
+.chessboard .f-7 {
+	top: 79px;
+	left: 382px;
+}
+
+.chessboard .f-8 {
+	top: 7px;
+	left: 382px;
+}
+
+
+.chessboard .g-1 {
+	top: 524px;
+	left: 456px;
+}
+
+.chessboard .g-2 {
+	top: 452px;
+	left: 456px;
+}
+
+.chessboard .g-3 {
+	top: 375px;
+	left: 456px;
+}
+
+.chessboard .g-4 {
+	top: 302px;
+	left: 456px;
+}
+
+.chessboard .g-5 {
+	top: 228px;
+	left: 456px;
+}
+
+.chessboard .g-6 {
+	top: 151px;
+	left: 456px;
+}
+
+.chessboard .g-7 {
+	top: 79px;
+	left: 456px;
+}
+
+.chessboard .g-8 {
+	top: 7px;
+	left: 456px;
+}
+
+.chessboard .h-1 {
+	top: 524px;
+	left: 531px;
+}
+
+.chessboard .h-2 {
+	top: 452px;
+	left: 531px;
+}
+
+.chessboard .h-3 {
+	top: 375px;
+	left: 531px;
+}
+
+.chessboard .h-4 {
+	top: 302px;
+	left: 531px;
+}
+
+.chessboard .h-5 {
+	top: 228px;
+	left: 531px;
+}
+
+.chessboard .h-6 {
+	top: 151px;
+	left: 531px;
+}
+
+.chessboard .h-7 {
+	top: 79px;
+	left: 531px;
+}
+
+.chessboard .h-8 {
+	top: 7px;
+	left: 531px;
+}
+
+/*
+	Wood style
+*/
+.chessboard.wood .square {
+	background: #533221;
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#533221), color-stop(3%,#76472b), color-stop(5%,#533221), color-stop(8%,#76472b), color-stop(10%,#533221), color-stop(13%,#76472b), color-stop(16%,#533221), color-stop(24%,#76472b), color-stop(26%,#533221), color-stop(29%,#76472b), color-stop(33%,#533221), color-stop(37%,#76472b), color-stop(41%,#533221), color-stop(44%,#76472b), color-stop(48%,#533221), color-stop(52%,#76472b), color-stop(59%,#533221), color-stop(68%,#76472b), color-stop(73%,#533221), color-stop(78%,#76472b), color-stop(81%,#533221), color-stop(83%,#76472b), color-stop(86%,#533221), color-stop(88%,#76472b), color-stop(90%,#533221), color-stop(93%,#76472b), color-stop(95%,#533221), color-stop(98%,#76472b), color-stop(100%,#533221));
+	background: linear-gradient(to right, #533221 0%,#76472b 3%,#533221 5%,#76472b 8%,#533221 10%,#76472b 13%,#533221 16%,#76472b 24%,#533221 26%,#76472b 29%,#533221 33%,#76472b 37%,#533221 41%,#76472b 44%,#533221 48%,#76472b 52%,#533221 59%,#76472b 68%,#533221 73%,#76472b 78%,#533221 81%,#76472b 83%,#533221 86%,#76472b 88%,#533221 90%,#76472b 93%,#533221 95%,#76472b 98%,#533221 100%);
+}
+
+.chessboard.wood .line-square:nth-child(odd) .square:nth-child(odd),
+.chessboard.wood .line-square:nth-child(even) .square:nth-child(even) {
+	background: #d6ad7c;
+	background: -webkit-gradient(linear, left top, right top, color-stop(1%,#d6ad7c), color-stop(5%,#dcb687), color-stop(6%,#dab282), color-stop(10%,#d4aa7a), color-stop(14%,#e0ba8d), color-stop(17%,#d4aa7a), color-stop(21%,#e0ba8d), color-stop(24%,#d4aa7a), color-stop(26%,#e0ba8d), color-stop(29%,#d4aa7a), color-stop(32%,#e0ba8d), color-stop(34%,#d4aa7a), color-stop(37%,#d4aa7a), color-stop(39%,#e0ba8d), color-stop(46%,#d4aa7a), color-stop(46%,#e0ba8d), color-stop(50%,#e0ba8d), color-stop(54%,#d4aa7a), color-stop(56%,#e0ba8d), color-stop(64%,#d4aa7a), color-stop(69%,#e0ba8d), color-stop(70%,#d4aa7a), color-stop(80%,#e0ba8d), color-stop(83%,#d4aa7a), color-stop(86%,#e0ba8d), color-stop(89%,#ddb07c), color-stop(96%,#e0ba8d), color-stop(97%,#e0ba8d), color-stop(100%,#d6ad7c));
+	background: linear-gradient(to right, #d6ad7c 1%,#dcb687 5%,#dab282 6%,#d4aa7a 10%,#e0ba8d 14%,#d4aa7a 17%,#e0ba8d 21%,#d4aa7a 24%,#e0ba8d 26%,#d4aa7a 29%,#e0ba8d 32%,#d4aa7a 34%,#d4aa7a 37%,#e0ba8d 39%,#d4aa7a 46%,#e0ba8d 46%,#e0ba8d 50%,#d4aa7a 54%,#e0ba8d 56%,#d4aa7a 64%,#e0ba8d 69%,#d4aa7a 70%,#e0ba8d 80%,#d4aa7a 83%,#e0ba8d 86%,#ddb07c 89%,#e0ba8d 96%,#e0ba8d 97%,#d6ad7c 100%);
+}
+
+.chessboard.wood .piece.white {
+	color: #FFF;
+}
+
+/*
+	Imagem das peças
+*/
+/* Peão */
+.chessboard.wood .pawn.white:before {
+	content: "\265F";
+}
+
+/* Cavalo */
+.chessboard.wood .knight.white:before {
+	content: "\265E";
+}
+
+/* Bispo */
+.chessboard.wood .bishop.white:before {
+	content: "\265D";
+}
+
+/* Torre */
+.chessboard.wood .rook.white:before {
+	content: "\265C";
+}
+
+/* Rainha */
+.chessboard.wood .queen.white:before {
+	content: "\265B";
+}
+
+/* Rei */
+.chessboard.wood .king.white:before {
+	content: "\265A";
+}
