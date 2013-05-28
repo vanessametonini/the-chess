@@ -6,7 +6,7 @@ HTML Chess, um projeto experimental.
 [Veja uma demonstração](http://www.vanessametonini.com.br/chess/)
 
 ## O inicio
-O The Chess começou quando no www2013, teve um desafio que era criar um tabuleiro de Xadrez com HTML, CSS sem imagens, como jurados do desafio tinha nada menos que o cara que criou o CSS o Bert Boss. O desafio foi aceito e depois de muita conversa e códigos a Vanessa apresentou o resultado no evento.
+O The Chess começou quando no www2013, teve um desafio que era criar um tabuleiro de Xadrez com HTML, CSS sem imagens, como jurados do desafio tinha nada menos que o cara que criou o CSS o Bert Bos. O desafio foi aceito e depois de muita conversa e códigos a Vanessa apresentou o resultado no evento.
 
 ## Envolvidos
 
