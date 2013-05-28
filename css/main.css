@@ -1,3 +1,8 @@
+/*
+	WWW2013 Rio de Janeiro
+	CSS Challenges
+	Team: Vanessa Me Tonini & Ofelquis Gimenes;
+*/
 html, body {
 	margin: 0;
 	padding: 0;
@@ -12,7 +17,7 @@ html, body {
 }
 
 /*
-	Quadros
+	Squares
 */
 .chessboard .square {
 	width: 73px;
@@ -40,7 +45,7 @@ html, body {
 }
 
 /*
-	Números
+	Numbers
 */
 .chessboard {
 	counter-reset: numero 9;
@@ -60,7 +65,7 @@ html, body {
 }
 
 /*
-	Letras
+	Letters
 */
 .chessboard .line-square:nth-child(8) .square::before {
 	position: absolute;
@@ -105,7 +110,7 @@ html, body {
 }
 
 /*
-	Peças
+	Pieces
 */
 .chessboard .piece {
 	display: block;
@@ -120,9 +125,9 @@ html, body {
 }
 
 /*
-	Imagem das peças
+	Piece's images
 */
-/* Peão */
+/* Pawn */
 .chessboard .pawn.white:before {
 	content: "\2659";
 }
@@ -131,7 +136,7 @@ html, body {
 	content: "\265F";
 }
 
-/* Cavalo */
+/* Knight */
 .chessboard .knight.white:before {
 	content: "\2658";
 }
@@ -140,7 +145,7 @@ html, body {
 	content: "\265E";
 }
 
-/* Bispo */
+/* Bishop */
 .chessboard .bishop.white:before {
 	content: "\2657";
 }
@@ -149,7 +154,7 @@ html, body {
 	content: "\265D";
 }
 
-/* Torre */
+/* Rook */
 .chessboard .rook.white:before {
 	content: "\2656";
 }
@@ -158,7 +163,7 @@ html, body {
 	content: "\265C";
 }
 
-/* Rainha */
+/* Queen */
 .chessboard .queen.white:before {
 	content: "\2655";
 }
@@ -167,7 +172,7 @@ html, body {
 	content: "\265B";
 }
 
-/* Rei */
+/* King */
 .chessboard .king.white:before {
 	content: "\2654";
 }
@@ -177,7 +182,7 @@ html, body {
 }
 
 /*
-	Posição das peças
+	Pieces position
 */
 .chessboard .a-1 {
 	top: 526px;
@@ -501,7 +506,7 @@ html, body {
 }
 
 /*
-	Wood style
+	Wood theme
 */
 .chessboard.wood .square {
 	background: #533221;
@@ -521,34 +526,34 @@ html, body {
 }
 
 /*
-	Imagem das peças
+	Piece's images for Wood theme
 */
-/* Peão */
+/* Pawn */
 .chessboard.wood .pawn.white:before {
 	content: "\265F";
 }
 
-/* Cavalo */
+/* Knight */
 .chessboard.wood .knight.white:before {
 	content: "\265E";
 }
 
-/* Bispo */
+/* Bishop */
 .chessboard.wood .bishop.white:before {
 	content: "\265D";
 }
 
-/* Torre */
+/* Rook */
 .chessboard.wood .rook.white:before {
 	content: "\265C";
 }
 
-/* Rainha */
+/* Queen */
 .chessboard.wood .queen.white:before {
 	content: "\265B";
 }
 
-/* Rei */
+/* King */
 .chessboard.wood .king.white:before {
 	content: "\265A";
 }
